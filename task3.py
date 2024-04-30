@@ -1,34 +1,41 @@
-while 1:
-    while 1:
-        print('please give us operation :\n(sum,divide,difference,multiple)')
-        a=input()
-        if a=='sum' or a=='divide' or a=='difference' or a=='multiple':
+def thief():
+    a3="true"
+    a1="true"
+    c1='false'
+    c3='false'
+    d2='true'
+    a2="true" 
+    b1='true'  
+    b3=''
+    b2=''
+    c2=''
+    d1=''
+    d3=''
+    false_count=2
+    true_count=5
+    while false_count<6:
+        if a2=='true':
+            b3='false'
+            false_count+=1
+            if b3=='false':
+                d3='false'
+                false_count+=1
+                b2='true'
+                true_count+=1
+                if true_count==6:
+                    c2='false'
+                    d1='false'
+                    false_count+=2
+                    
+
+            else:
+                break
+            
+        else :
+            a2='false' 
+            false_count+=1
             break
-        else:
-            print('invalid') 
-    print("please give us numbers")
-    b=input()
-    c=input()
-    try:
-       b=int(b)
-    except ValueError:
-           b=float(b)
-    try:
-       c=int(c)
-    except ValueError:
-           c=float(c)
-    if a=='sum':
-        result = b+c
-        print('the answre is : ',result)
-    elif a=='difference':
-        result = b-c
-        print('the answre is : ',result)
-    elif a=='multiple':
-        result = b*c
-        print('the answre is : ',result)
-    elif a=='divide':
-        if c==0 :
-            print('cant divide by zero')
-        else:
-            result = b/c
-            print('the answre is : ',result)
+    if (true_count==6 and false_count==6):
+        print('the thief is B')
+
+thief()
